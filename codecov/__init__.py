@@ -721,7 +721,7 @@ def main(*argv, **kwargs):
 
             # Find reports
             # ------------
-            for _root, dirs, files in os.walk(root):
+            for _root, dirs, files in os.walk(os.getcwd()):
                 # need to replace('\\', '/') for Windows
                 if not ignored_path(_root.replace('\\', '/')) and bower_components not in _root.replace('\\', '/'):
                     # add data to tboc
